@@ -8,7 +8,6 @@
 🌍 **Live Demo:**  
 👉 [Click here to try the app](https://ai-financial-inclusion-assistant-sheshyy-final-project.streamlit.app/)
 
----
 
 ## 🧠 Project Overview
 The **AI Financial Inclusion Assistant** is a Streamlit-based machine learning prototype that helps **families raising children with special needs** predict their upcoming monthly expenses and receive **personalized financial advice**.  
@@ -19,7 +18,6 @@ Combining my **background in Financial Engineering** and **AI training**, I buil
 - **SDG 1:** No Poverty  
 - **SDG 10:** Reduced Inequalities  
 
----
 
 ## 🎯 Objectives
 - Predict next month’s household expenses based on income and expense data.  
@@ -28,7 +26,6 @@ Combining my **background in Financial Engineering** and **AI training**, I buil
 - Allow users to **choose between a Random Forest model and a Deep Learning model** for prediction.  
 - Demonstrate an **end-to-end AI pipeline** from data to deployment.  
 
----
 
 ## ⚙️ Tech Stack
 | Category | Tools & Libraries |
@@ -41,7 +38,6 @@ Combining my **background in Financial Engineering** and **AI training**, I buil
 | **Deployment** | Streamlit Cloud |
 | **Model Storage** | joblib (.joblib), H5 (.h5) |
 
----
 
 ## 🧩 How It Works
 1. **User Input:**  
@@ -68,14 +64,12 @@ Combining my **background in Financial Engineering** and **AI training**, I buil
 6. **Support Resources:**  
    The app provides links to government and NGO programs like NCPWD, NHIF, and Special Olympics Kenya.  
 
----
 
 ## 🧪 Installation & Setup
 
 ### 1. Clone the repository
-```bash
-  git clone https://github.com/<your-username>/AI-Financial-Inclusion-Assistant.git
-  cd AI-Financial-Inclusion-Assistant
+ git clone https://github.com/<your-username>/AI-Financial-Inclusion-Assistant.git
+ cd AI-Financial-Inclusion-Assistant
 ###2. Create and activate a virtual environment
 python -m venv venv
 venv\Scripts\activate     # on Windows
