@@ -71,15 +71,15 @@ Combining my **background in Financial Engineering** and **AI training**, I buil
  git clone https://github.com/<your-username>/AI-Financial-Inclusion-Assistant.git
  cd AI-Financial-Inclusion-Assistant
  
-###2. Create and activate a virtual environment
+### 2. Create and activate a virtual environment
 python -m venv venv
 venv\Scripts\activate     # on Windows
 source venv/bin/activate  # on Mac/Linux
 
-###3. Install dependencies
+### 3. Install dependencies
 pip install -r requirements.txt
 
-###4. Run the Streamlit app
+### 4. Run the Streamlit app
 streamlit run app.py
 
 📊 Example Inputs
@@ -93,31 +93,31 @@ streamlit run app.py
 | Physiotherapy    | 2,000         |
 | Medication       | 1,000         |
 | School Fees      | 4,000         |
-📈 Expected Output
+## 📈 Expected Output
 
 Predicted Total Monthly Expenses: KSh 23,500 (example)
 
 Financial Health Score: 72%
 
 Advice: “Your spending is balanced. Try saving 10% monthly for emergencies.”
-🧠 Model Details
+## 🧠 Model Details
 Model Type	Description	Use Case
 Random Forest Regressor: A tree-based ensemble model trained on synthetic Kenyan household data.	Default option — provides fast, explainable predictions for small datasets.
 Deep Learning Model (TensorFlow/Keras)	A simple feedforward neural network trained on the same dataset.	Optional — captures complex, non-linear expense patterns when more data is available.
 
-Dataset:
+## Dataset:
 Synthetic data simulating realistic Kenyan household expenses, including special needs–related costs (e.g., therapy, medications, special education).
 
-Features:
+## Features:
 14 numeric inputs (income sources + general + special needs expenses).
 
-Evaluation Metrics:
+## Evaluation Metrics:
 
 Coefficient of Determination (R²)
 
 Mean Absolute Error (MAE)
 
-Future Enhancements:
+## Future Enhancements:
 
 Integrate real anonymised expense data from NCPWD or NGOs.
 
@@ -125,16 +125,16 @@ Fine-tune the deep learning architecture for higher accuracy.
 
 Replace rule-based NLP with a fine-tuned transformer model (e.g., BERT).
 
-🚀 Deployment
+## 🚀 Deployment
 
 The app is deployed publicly via Streamlit Cloud.
 
-🧾 Example Use Case
+##🧾 Example Use Case
 
 A parent caring for a child with autism enters their household income and therapy costs.
 The AI model predicts next month’s likely expenses, calculates a financial health score, and provides tailored savings and budgeting advice — helping the family plan ahead while linking them to disability support programs.
 
-📚 References
+## 📚 References
 
 Power Learn Project (PLP) – AI for Software Engineering Course
 
@@ -146,13 +146,13 @@ National Council for Persons with Disabilities (NCPWD)
 
 Special Olympics Kenya
 
-💬 Author
+## 💬 Author
 
 Sandra Wangeci Kirundi
 📧 kirundisandra@gmail.com
  | 📞 +254 797 074 219
 🌍 Nairobi, Kenya
 
-💙 Acknowledgment
+## 💙 Acknowledgment
 
 “This project was inspired by my volunteer experience at Special Olympics Kenya and my goal to use data science and AI to empower families raising children with special needs. Though a prototype, it demonstrates how AI can promote real social and economic impact.”
