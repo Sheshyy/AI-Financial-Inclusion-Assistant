@@ -106,7 +106,48 @@ Random Forest Regressor: A tree-based ensemble model trained on synthetic Kenyan
 Deep Learning Model (TensorFlow/Keras)	A simple feedforward neural network trained on the same dataset.	Optional — captures complex, non-linear expense patterns when more data is available.
 
 ## Dataset:
-Synthetic data simulating realistic Kenyan household expenses, including special needs–related costs (e.g., therapy, medications, special education).
+Synthetic Data Generation
+
+Since no real financial inclusion dataset was available for this specific prediction task, this project utilises a synthetically generated dataset designed to mimic realistic household financial behaviour. The synthetic data was generated using controlled probabilistic distributions based on common financial patterns observed in low-income and middle-income populations.
+
+The generation process followed these principles:
+
+Income Values
+
+Generated using a log-normal distribution to reflect skewed real-world income levels.
+
+Ensures a high proportion of low-income entries and a lower proportion of high-income entries.
+
+Expenses Breakdown
+
+Food, transport, healthcare, utilities, and miscellaneous expenses were generated using:
+
+Fixed percentages based on realistic household budget ratios
+
+Random variation introduced using normal noise
+
+Ensures variance while keeping values realistic.
+
+Savings Behavior
+
+Modeled as a function of disposable income
+
+Added randomness to simulate unpredictable human financial decisions
+
+Debt Levels
+
+Generated with a right-skewed distribution to reflect real debt patterns
+
+Higher-income households more likely to have formal loans
+
+Lower-income households more likely to have smaller or informal debts
+
+Random Noise for Realism
+
+Gaussian noise added to all numerical values to avoid overly clean data
+
+Limitations of Synthetic Data
+While synthetic data enables experimentation, it may not capture the full complexity of real-world financial behavior. For this reason, all results should be interpreted as prototype-level insights, not real financial advice.
 
 ## Features:
 14 numeric inputs (income sources + general + special needs expenses).
@@ -116,6 +157,45 @@ Synthetic data simulating realistic Kenyan household expenses, including special
 Coefficient of Determination (R²)
 
 Mean Absolute Error (MAE)
+
+## Fairness & Ethical Considerations
+
+This project operates in a socially sensitive domain (financial inclusion), which requires awareness of potential bias, unequal model performance, and ethical implications.
+
+Key fairness considerations include:
+
+Bias from Synthetic Data
+
+Since the model was trained on synthetic data, it may learn patterns that reflect the assumptions used during data generation rather than real population diversity.
+
+Group Fairness
+
+Different income ranges may receive different quality predictions.
+
+For example, the model might be more accurate for middle-income households than extremely low-income households.
+
+Mitigation Approach
+
+During data generation, the synthetic dataset was designed to represent a wide range of income and expense levels to help reduce bias.
+
+Expense proportions and noise were applied uniformly across all groups to avoid favouring one category over another.
+
+Usage Disclaimer
+
+This tool should not be used to make high-stakes financial decisions.
+
+It is intended as an educational and exploratory prototype, not a real financial evaluation system.
+
+## Limitations
+
+- **Lightweight Model for Prediction:** The expense prediction uses a Random Forest or a small Deep Learning model. While accurate for demonstration, its predictions may not fully generalize to real-world financial data.
+
+- **Rule-Based Chatbot:** The AI financial advisor responds using predefined keywords. It cannot interpret questions outside its known set of terms (e.g., 'saving', 'loan', 'grant', 'budget', 'insurance', 'expense'). Answers are not dynamically generated.
+
+- **Tiny Synthetic Dataset:** The dataset used for demonstration is small and synthetically generated; it does not reflect real household financial behaviour.
+
+- **No Long-Term Memory:** Each user query is processed independently; the system cannot remember prior conversations.
+
 
 ## Future Enhancements:
 
