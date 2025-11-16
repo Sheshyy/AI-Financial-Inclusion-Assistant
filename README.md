@@ -58,7 +58,7 @@ Combining my **background in Financial Engineering** and **AI training**, I buil
    - A **Financial Health Score** (progress bar)  
    - Personalised budgeting tips and financial advice  
 
-5. **AI Financial Advisor (NLP):**  
+5. **AI Financial Advisor:**  
    A rule-based chatbot answers financial questions about savings, grants, loans, and insurance options.  
 
 6. **Support Resources:**  
@@ -108,78 +108,27 @@ Deep Learning Model (TensorFlow/Keras)	A simple feedforward neural network train
 ## Dataset:
 Synthetic Data Generation
 
-Since no real financial inclusion dataset was available for this specific prediction task, this project utilises a synthetically generated dataset designed to mimic realistic household financial behaviour. The synthetic data was generated using controlled probabilistic distributions based on common financial patterns observed in low-income and middle-income populations.
-
-The generation process followed these principles:
-
-Income Values
-
-Generated using a log-normal distribution to reflect skewed real-world income levels.
-
-Ensures a high proportion of low-income entries and a lower proportion of high-income entries.
-
-Expenses Breakdown
-
-Food, transport, healthcare, utilities, and miscellaneous expenses were generated using:
-
-Fixed percentages based on realistic household budget ratios
-
-Random variation introduced using normal noise
-
-Ensures variance while keeping values realistic.
-
-Savings Behavior
-
-Modeled as a function of disposable income
-
-Added randomness to simulate unpredictable human financial decisions
-
-Debt Levels
-
-Generated with a right-skewed distribution to reflect real debt patterns
-
-Higher-income households more likely to have formal loans
-
-Lower-income households more likely to have smaller or informal debts
-
-Random Noise for Realism
-
-Gaussian noise added to all numerical values to avoid overly clean data
+Since no real financial inclusion dataset was available for this specific prediction task, this project utilises a synthetically generated dataset designed to mimic realistic household financial behaviour.
 
 Limitations of Synthetic Data
-While synthetic data enables experimentation, it may not capture the full complexity of real-world financial behavior. For this reason, all results should be interpreted as prototype-level insights, not real financial advice.
+While synthetic data enables experimentation, it may not capture the full complexity of real-world financial behaviour. For this reason, all results should be interpreted as prototype-level insights, not real financial advice.
 
 ## Features:
 14 numeric inputs (income sources + general + special needs expenses).
 
 ## Evaluation Metrics:
 
-Coefficient of Determination (R²)
+R² Score: 0.883
 
-Mean Absolute Error (MAE)
+Mean Absolute Error (MAE): KSh 4,823.39
 
 ## Fairness & Ethical Considerations
 
-This project operates in a socially sensitive domain (financial inclusion), which requires awareness of potential bias, unequal model performance, and ethical implications.
+Model trained on synthetic data; may not represent all socioeconomic groups.
 
-Key fairness considerations include:
+Inputs are processed locally; no user data is stored.
 
-Bias from Synthetic Data
-
-Since the model was trained on synthetic data, it may learn patterns that reflect the assumptions used during data generation rather than real population diversity.
-
-Group Fairness
-
-Different income ranges may receive different quality predictions.
-
-For example, the model might be more accurate for middle-income households than extremely low-income households.
-
-Mitigation Approach
-
-During data generation, the synthetic dataset was designed to represent a wide range of income and expense levels to help reduce bias.
-
-Expense proportions and noise were applied uniformly across all groups to avoid favouring one category over another.
-
+The tool is intended for financial awareness and budgeting guidance, not personalised financial advice.
 Usage Disclaimer
 
 This tool should not be used to make high-stakes financial decisions.
